@@ -36,5 +36,5 @@ management:
 info:
   app:
     name: "catalog-service"
-    description: "Bibliotech Catalog Service Application"
+    description: "Bibliotech Catalog Service App"
     version: "1.0.0"
