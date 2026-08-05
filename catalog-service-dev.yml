@@ -8,9 +8,13 @@ spring:
     driver-class-name: org.postgresql.Driver
 
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: validate
-      show-sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
 
 eureka:
   instance:
