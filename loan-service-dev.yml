@@ -42,3 +42,6 @@ info:
     name: "loan-service"
     description: "Bibliotech Loan Service App"
     version: "1.0.0"
+
+loan:
+  duration-days: 30
