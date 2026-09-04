@@ -44,4 +44,4 @@ info:
     version: "1.0.0"
 
 loan:
-  duration-days: 30
+  duration-days: 14
