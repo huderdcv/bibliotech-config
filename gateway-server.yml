@@ -8,7 +8,8 @@ spring:
         webflux:
           discovery:
             locator:
-              enabled: true
+#              we are going to deactivate because we are going to use custom routes
+              enabled: false # with this in false, the next line no matter
               lower-case-service-id: true
 
 eureka:
