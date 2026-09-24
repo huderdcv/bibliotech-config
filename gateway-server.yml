@@ -1,0 +1,42 @@
+server:
+  port: 8072
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+#              we are going to deactivate because we are going to use custom routes
+              enabled: false # with this in false, the next line no matter
+              lower-case-service-id: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,refresh,gateway"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gateway-server"
+    description: "Bibliotech Gateway server App"
+    version: "1.0.0"
